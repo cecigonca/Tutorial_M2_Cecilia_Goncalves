@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Sqlite" id="Project-252a" database="Sqlite" >
+	<schema name="Default" >
+		<table name="EXPERIENCIA" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="DATA" type="TEXT" jt="-1" />
+			<column name="DESCRICAO" type="LONGTEXT" jt="-1" />
+			<column name="EXPERIENCIA_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_EXPERIENCIA" unique="PRIMARY_KEY" >
+				<column name="EXPERIENCIA_ID" />
+			</index>
+			<fk name="fk_EXPERIENCIA" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+		<table name="FORMACAO" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="DATA" type="TEXT" jt="-1" />
+			<column name="DESCRICAO" type="LONGTEXT" jt="-1" />
+			<column name="FORMACAO_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_FORMACAO" unique="PRIMARY_KEY" >
+				<column name="FORMACAO_ID" />
+			</index>
+			<fk name="fk_FORMACAO" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+		<table name="HABILIDADES" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="NIVEL" type="INTEGER" jt="4" />
+			<column name="HABILIDADES_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_HABILIDADES" unique="PRIMARY_KEY" >
+				<column name="HABILIDADES_ID" />
+			</index>
+			<fk name="fk_HABILIDADES" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+		<table name="INFORMACOES" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="USER_ID" type="INTEGER" jt="4" mandatory="y" />
+			<index name="pk_INFORMACOES" unique="PRIMARY_KEY" >
+				<column name="USER_ID" />
+			</index>
+		</table>
+		<table name="PERSONALIDADE" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="DESCRICAO" type="LONGTEXT" jt="-1" />
+			<column name="PERSONALIDADE_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_PERSONALIDADE" unique="PRIMARY_KEY" >
+				<column name="PERSONALIDADE_ID" />
+			</index>
+			<fk name="fk_PERSONALIDADE" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+		<table name="REALIZACOES" >
+			<column name="NOME" type="TEXT" jt="-1" />
+			<column name="DATA" type="TEXT" jt="-1" />
+			<column name="DESCRICAO" type="TEXT" jt="-1" />
+			<column name="REALIZACOES_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_REALIZACOES" unique="PRIMARY_KEY" >
+				<column name="REALIZACOES_ID" />
+			</index>
+			<fk name="fk_REALIZACOES" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+		<table name="SOBRE MIM" >
+			<column name="ENDERECO" type="LONGTEXT" jt="-1" />
+			<column name="TELEFONE" type="INTEGER" jt="4" />
+			<column name="EMAIL" type="TEXT" jt="-1" />
+			<column name="DESCRICAO" type="LONGTEXT" jt="-1" />
+			<column name="SOBREMIM_ID" type="INTEGER" jt="4" mandatory="y" />
+			<column name="USER_ID" type="INTEGER" jt="4" />
+			<index name="pk_SOBRE MIM" unique="PRIMARY_KEY" >
+				<column name="SOBREMIM_ID" />
+			</index>
+			<fk name="fk_SOBRE MIM" to_schema="Default" to_table="INFORMACOES" >
+				<fk_column name="USER_ID" pk="USER_ID" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="Sqlite" database="Sqlite" driver_class="org.sqlite.JDBC" driver_jar="sqlite-jdbc-3.40.0.0.jar" driver_desc="Standard" host="localhost" port="7210" instance="C:/Users/cecig/Dropbox/GitHub/Tutorial_M2_Cecilia_Goncalves/SEMANA_02/02_AUT_EST_ENTREGA/ponderada_s2" useSystemProxy="false" />
+	<layout name="Main Layout" id="Layout-1787" show_relation="columns" >
+		<entity schema="Default" name="EXPERIENCIA" color="C1D8EE" x="608" y="336" />
+		<entity schema="Default" name="FORMACAO" color="C1D8EE" x="160" y="320" />
+		<entity schema="Default" name="HABILIDADES" color="C1D8EE" x="48" y="160" />
+		<entity schema="Default" name="INFORMACOES" color="C1D8EE" x="304" y="48" />
+		<entity schema="Default" name="PERSONALIDADE" color="C1D8EE" x="192" y="496" />
+		<entity schema="Default" name="REALIZACOES" color="C1D8EE" x="608" y="160" />
+		<entity schema="Default" name="SOBRE MIM" color="C1D8EE" x="416" y="480" />
+	</layout>
+</project>

@@ -1,0 +1,11 @@
+{
+  "name": "02_aut_est_entrega",
+  "version": "1.0.0",
+  "description": "Atualize seu seu projeto individual do currículo profissional incluindo 5 endpoints para gerenciar uma das tabelas/áreas criadas, o que chamamos de CRUD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
