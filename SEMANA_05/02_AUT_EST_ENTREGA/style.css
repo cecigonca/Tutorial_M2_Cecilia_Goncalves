@@ -11,15 +11,15 @@ h1,h2 {
 
 h1 {
 	border-bottom: 1px solid #c1c1c1;
-	background-color: #707070;
+	background-color: #777777;
 	color: #ddd;
 	padding: 5px;	
     margin: 0 0 0 -15px;
 }
 
 h2 {
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;
 	background-color: #c1c1c1;
 	padding-left: 5px;
 	margin: 0 0 0 -15px;
