@@ -1,0 +1,61 @@
+body {
+	background-color: bisque;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000
+}
+
+.titulo {
+	text-align: center;
+}
+
+h2 {
+    border-top: 1px solid #ffad73;
+	border-bottom: 1px solid #ffad73;
+	background-color: #f4ae5f;
+	padding-left: 5px;
+	margin: 0 0 0 -15px;
+	font-weight: bold;
+}
+
+.foto {
+	height: 250px;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#meuBotao {
+	margin-left: auto;
+	margin-right: auto;
+}
+.botao {
+	background-color:rgb(239, 200, 153); /* Define a cor padrão do botão */
+}
+
+.botao:hover {
+	background-color: rgb(255, 131, 23); /* Define a cor quando o cursor passa por cima */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section {
+    flex-basis: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center; 
+  }
+
+.nome-info,
+.link-info {
+    display: none;
+  }
+.container p {
+    margin-right: 10px; /* Adicione a quantidade de espaço desejada */
+  }
+  
+  
+  
